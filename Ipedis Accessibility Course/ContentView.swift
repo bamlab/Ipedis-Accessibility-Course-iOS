@@ -1,22 +1,25 @@
-//
-//  ContentView.swift
-//  Ipedis Accessibility Course
-//
-//  Created by Dennis BORDET on 13/11/2024.
-//
-
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
+    @EnvironmentObject var router: Router
+       
+       var body: some View {
+           NavigationStack(path: $router.navPath) {
+               HomeScreen()
+                   .navigationDestination(for: Router.Destination.self) { destination in
+                       switch destination {
+                       case .home:
+                           HomeScreen()
+                       case .list:
+                           ListScreen()
+                       case .order:
+                           OrderScreen()
+                       case .detail:
+                           DetailScreen()
+                       }
+                   }
+           }
+       }
 }
 
 #Preview {

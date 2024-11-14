@@ -16,6 +16,8 @@ struct HomeScreen: View {
                 router.navigate(to: .detail)
             }
             
+            CustomArticle(title: "Article 1", content: "Ceci est le contenu de l'article 1")
+            
             CustomButton(title: "Voir la Liste") {
                 router.navigate(to: .list)
             }

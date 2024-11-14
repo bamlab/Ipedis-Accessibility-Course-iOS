@@ -5,7 +5,6 @@ struct CustomListItem: View {
     var onClick: () -> Void = {}
 
     var body: some View {
-        Button(action: onClick) {
             HStack(alignment: .center, spacing: 0) {
                 VStack(alignment: .leading, spacing: 8) {
                     HStack(alignment: .center, spacing: 12) {
@@ -28,8 +27,7 @@ struct CustomListItem: View {
                     .foregroundColor(.gray)
             }
             .padding(16)
-        }
-        .buttonStyle(PlainButtonStyle())
+            .customClick(action: onClick)
     }
 }
 

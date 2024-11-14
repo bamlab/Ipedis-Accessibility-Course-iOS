@@ -5,13 +5,14 @@ struct CustomButton: View {
     var action: () -> Void
 
     var body: some View {
-        Button(action: action) {
+        VStack {
             Text(title)
                 .font(.headline)
-                .padding()
-                .background(Color.blue)
-                .foregroundColor(.white)
-                .cornerRadius(8)
         }
+        .padding()
+        .background(Color.blue)
+        .foregroundColor(.white)
+        .cornerRadius(8)
+        .customClick(action: action)
     }
 }

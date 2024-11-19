@@ -26,6 +26,10 @@ struct DetailScreen: View {
             Spacer().frame(height: 100)
             Text("Nos offres")
                 .font(.headline)
+            Image("nosoffres")
+                .resizable()
+                .frame(width: 200, height: 200)
+                .aspectRatio(contentMode: .fill)
             CustomButton(title: "En savoir plus") {
                 moreVisible = true
             }

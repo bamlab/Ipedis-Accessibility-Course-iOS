@@ -6,6 +6,8 @@ final class Router: ObservableObject {
         case list
         case order
         case detail
+        case offer
+        case canvas
     }
     
     @Published var navPath = NavigationPath()

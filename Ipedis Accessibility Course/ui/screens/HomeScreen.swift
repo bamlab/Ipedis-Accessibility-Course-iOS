@@ -18,12 +18,20 @@ struct HomeScreen: View {
             
             CustomArticle(title: "Article 1", content: "Ceci est le contenu de l'article 1")
             
-            CustomButton(title: "Voir la Liste") {
-                router.navigate(to: .list)
-            }
-
-            CustomButton(title: "Voir l'ordre") {
-                router.navigate(to: .order)
+            HStack {
+                CustomButton(title: "Voir la Liste") {
+                    router.navigate(to: .list)
+                }
+                
+                CustomButton(title: "Voir l'ordre") {
+                    router.navigate(to: .order)
+                }
+                CustomButton(title: "Voir nos offres") {
+                    router.navigate(to: .offer)
+                }
+                CustomButton(title: "Canvas") {
+                    router.navigate(to: .canvas)
+                }
             }
         }
         .navigationTitle("Home")

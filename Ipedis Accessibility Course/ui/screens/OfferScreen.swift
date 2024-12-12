@@ -2,14 +2,9 @@
 import SwiftUI
 
 struct OfferScreen: View {
+    
     var body: some View {
         VStack {
-            Button(action: {
-                // Handle back action
-            }) {
-                Image(systemName: "arrow.backward")
-            }
-            .padding()
 
             let imageContentDescription = "Nos offres d'emploi"
 

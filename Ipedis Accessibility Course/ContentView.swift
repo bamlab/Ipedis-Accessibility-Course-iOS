@@ -20,6 +20,10 @@ struct ContentView: View {
                         OfferScreen()
                     case .canvas:
                         CanvasScreen()
+                    case .titles:
+                        TitlesScreen()
+                    default:
+                        EmptyView()
                     }
                 }
         }

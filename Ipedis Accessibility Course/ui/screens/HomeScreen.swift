@@ -35,6 +35,15 @@ struct HomeScreen: View {
                     CustomButton(title: "Titres") {
                         router.navigate(to: .titles)
                     }
+                    CustomButton(title: "Textes formatés") {
+                        router.navigate(to: .formatedTexts)
+                    }
+                    CustomButton(title: "Onglets") {
+                        router.navigate(to: .tabs)
+                    }
+                    CustomButton(title: "Formulaires") {
+                        router.navigate(to: .forms)
+                    }
                 }
             }
             .navigationTitle("Home")

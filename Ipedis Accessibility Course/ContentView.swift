@@ -5,7 +5,7 @@ struct ContentView: View {
        
     var body: some View {
         NavigationStack(path: $router.navPath) {
-            HomeScreen()
+            TabsScreen()
                 .navigationDestination(for: Router.Destination.self) { destination in
                     switch destination {
                     case .home:
@@ -22,6 +22,8 @@ struct ContentView: View {
                         CanvasScreen()
                     case .titles:
                         TitlesScreen()
+                    case .formatedTexts:
+                        FormattedTextsScreen()
                     default:
                         EmptyView()
                     }

@@ -11,24 +11,40 @@ import SwiftUI
 struct TabsScreen: View {
     @State private var selectedTabIndex = 0
 
-    private let tabs = ["Tab 1", "Tab 2"]
+    private let tabs = ["Acceuil", "Paramètres"]
     private let loremTexts = [
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     ]
+    
+    func getAccessibilityTabPosition(index: Int) -> String {
+        return "\(index + 1) sur \(tabs.count)"
+    }
 
     var body: some View {
         VStack {
-            CustomTabRow(selectedTabIndex: $selectedTabIndex, tabs: tabs)
-
             Text(loremTexts[selectedTabIndex])
                 .padding(16)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .font(.body)
-            
+                
             Spacer()
+
+            CustomTabRow(selectedTabIndex: $selectedTabIndex, tabs: tabs)
         }
         .padding()
+    }
+    
+    var bodyTabView: some View {
+        TabView(selection: $selectedTabIndex) {
+            ForEach(tabs.indices, id: \.self) { index in
+                Tab(tabs[index], systemImage: "person.crop.circle.fill", value: index) {
+                    Text(loremTexts[index])
+                        .padding(16)
+                        .font(.body)
+                }
+            }
+        }
     }
 }
 
@@ -44,6 +60,7 @@ struct CustomTabRow: View {
                     title: tabs[index],
                     onClick: { selectedTabIndex = index }
                 )
+                
             }
         }
         .frame(maxWidth: .infinity)

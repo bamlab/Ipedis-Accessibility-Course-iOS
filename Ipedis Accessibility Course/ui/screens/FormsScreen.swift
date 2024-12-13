@@ -23,14 +23,14 @@ struct FormsScreen: View {
                     value: $email,
                     label: "Email",
                     supportingText: badErrorText,
-                    isError: !isValidEmail(email),
+                    isError: !isValidEmail(email)
                 )
 
                 CustomTextField(
                     value: $phone,
                     label: "Telephone",
                     supportingText: "Le numéro de téléphone doit contenir exactement 10 chiffres",
-                    isError: !isValidPhone(phone),
+                    isError: !isValidPhone(phone)
                 )
             
                 let formSaved = "Formulaire enregistré avec succès"

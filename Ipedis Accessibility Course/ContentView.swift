@@ -5,7 +5,7 @@ struct ContentView: View {
        
     var body: some View {
         NavigationStack(path: $router.navPath) {
-            FormsScreen()
+            HomeScreen()
                 .navigationDestination(for: Router.Destination.self) { destination in
                     switch destination {
                     case .home:

@@ -19,6 +19,8 @@ Vous devrez les réaliser dans l'ordre.
 - Builder et lancer l'application
 - Naviguer dans l'application
 - Tester l'accessibilité de l'application
+  - Vous pouvez utiliser l'accessibility inspector de Xcode dans la plupart des cas
+  - Vous pouvez aussi activer VoiceOver sur votre appareil ou simulateur
 - Corriger les problèmes d'accessibilité
 - Tester à nouveau l'accessibilité de l'application
 

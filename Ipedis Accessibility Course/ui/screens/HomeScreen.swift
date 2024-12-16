@@ -20,30 +20,30 @@ struct HomeScreen: View {
                 CustomArticle(title: "Article 1", content: "Ceci est le contenu de l'article 1")
                 
                 VStack {
-                    CustomButton(title: "Voir la Liste") {
-                        router.navigate(to: .list)
-                    }
-                    CustomButton(title: "Voir l'ordre") {
-                        router.navigate(to: .order)
-                    }
-                    CustomButton(title: "Voir nos offres") {
-                        router.navigate(to: .offer)
-                    }
-                    CustomButton(title: "Canvas") {
-                        router.navigate(to: .canvas)
-                    }
-                    CustomButton(title: "Titres") {
-                        router.navigate(to: .titles)
-                    }
-                    CustomButton(title: "Textes formatés") {
-                        router.navigate(to: .formatedTexts)
-                    }
-                    CustomButton(title: "Onglets") {
-                        router.navigate(to: .tabs)
-                    }
-                    CustomButton(title: "Formulaires") {
-                        router.navigate(to: .forms)
-                    }
+                    Button(action: {router.navigate(to: .list)}) {
+                        Text("Voir la liste")
+                    }.buttonStyle(.borderedProminent)
+                    Button(action: {router.navigate(to: .order)}) {
+                        Text("Voir l'ordre")
+                    }.buttonStyle(.borderedProminent)
+                    Button(action: {router.navigate(to: .offer)}) {
+                        Text("Voir nos offres")
+                    }.buttonStyle(.borderedProminent)
+                    Button(action: {router.navigate(to: .canvas)}) {
+                        Text("Canvas")
+                    }.buttonStyle(.borderedProminent)
+                    Button(action: {router.navigate(to: .titles)}) {
+                        Text("Titres")
+                    }.buttonStyle(.borderedProminent)
+                    Button(action: {router.navigate(to: .formatedTexts)}) {
+                        Text("Textes formatés")
+                    }.buttonStyle(.borderedProminent)
+                    Button(action: {router.navigate(to: .tabs)}) {
+                        Text("Onglets")
+                    }.buttonStyle(.borderedProminent)
+                    Button(action: {router.navigate(to: .forms)}) {
+                        Text("Formulaires")
+                    }.buttonStyle(.borderedProminent)
                 }
             }
             .navigationTitle("Home")

@@ -7,19 +7,13 @@ struct DetailScreen: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-            HStack {
-                CustomIconButton(iconName: "arrow.left") {
-                    router.navigateBack()
-                }
-                Spacer()
-                CustomBadgedBox(badgeText: "2") {
-                    Image(systemName: "heart.fill")
-                        .font(.title)
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .clipShape(Circle())
-                }
+            CustomBadgedBox(badgeText: "2") {
+                Image(systemName: "heart.fill")
+                    .font(.title)
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .clipShape(Circle())
             }
             
             Text("Ceci est la page de détail")
@@ -30,9 +24,9 @@ struct DetailScreen: View {
                 .resizable()
                 .frame(width: 200, height: 200)
                 .aspectRatio(contentMode: .fill)
-            CustomButton(title: "En savoir plus") {
-                moreVisible = true
-            }
+            Button(action: {moreVisible = true}) {
+                Text("En savoir plus")
+            }.buttonStyle(.borderedProminent)
             if moreVisible {
                 Text("Voici plus d'informations sur nos offres")
             }

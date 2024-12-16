@@ -27,7 +27,6 @@ struct CustomListItem: View {
                     .foregroundColor(.gray)
             }
             .padding(16)
-            .customClick(action: onClick)
     }
 }
 

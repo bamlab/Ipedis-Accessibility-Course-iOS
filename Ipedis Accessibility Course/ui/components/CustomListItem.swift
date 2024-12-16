@@ -25,8 +25,10 @@ struct CustomListItem: View {
                 
                 Image(systemName: "chevron.right")
                     .foregroundColor(.gray)
+                    .accessbilityHidden(true)
             }
             .padding(16)
+            .customClick(action: onClick)
     }
 }
 

@@ -27,7 +27,7 @@ struct FormattedTextsScreen: View {
                 HStack {
                     Text("Date: ")
                         .font(.body)
-                    Text("25 fev 24")
+                    Text("25 feb 24")
                         .font(.body)
                 }
                 .padding(.bottom, 8)

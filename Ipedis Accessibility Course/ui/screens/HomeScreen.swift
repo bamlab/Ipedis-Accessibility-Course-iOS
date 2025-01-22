@@ -2,6 +2,7 @@ import SwiftUI
 
 struct HomeScreen: View {
     @EnvironmentObject var router: Router
+    @State private var isArticleVisible: Bool = true
 
     var body: some View {
         ScrollView {
@@ -17,7 +18,9 @@ struct HomeScreen: View {
                     router.navigate(to: .detail)
                 }
                 
-                CustomArticle(title: "Article 1", content: "Ceci est le contenu de l'article 1")
+                if(isArticleVisible) {
+                    CustomArticle(title: "Article 1", content: "Ceci est le contenu de l'article 1")
+                }
                 
                 VStack {
                     Button(action: {router.navigate(to: .list)}) {

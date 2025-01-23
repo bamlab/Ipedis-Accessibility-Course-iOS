@@ -35,3 +35,9 @@ struct DetailScreen: View {
         .navigationTitle("Details")
     }
 }
+
+struct DetailScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        DetailScreen()
+    }
+}

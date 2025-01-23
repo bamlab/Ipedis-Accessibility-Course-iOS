@@ -22,3 +22,9 @@ struct ListScreen: View {
            }
        }
    }
+
+struct ListScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        ListScreen()
+    }
+}

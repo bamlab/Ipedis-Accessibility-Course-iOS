@@ -5,7 +5,7 @@
 Pour installer le projet, il vous faut:
 
 - ⚠️ macOS
-- Xcode (ici 16.1)
+- Xcode (ici 26.2)
 - un simulateur ou un appareil iOS
 - Cloner le projet
 

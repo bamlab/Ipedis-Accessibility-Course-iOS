@@ -21,7 +21,7 @@ struct CardBox: View {
         }
         .padding()
         .background(Color(.secondarySystemBackground))
-        .cornerRadius(8)
+        .clipShape(.rect(cornerRadius: 8))
     }
 }
 
@@ -41,8 +41,6 @@ struct TraversalGroupDemo: View {
     }
 }
 
-struct OrderScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        OrderScreen()
-    }
+#Preview {
+    OrderScreen()
 }

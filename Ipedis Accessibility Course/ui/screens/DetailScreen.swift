@@ -12,7 +12,7 @@ struct DetailScreen: View {
                     .font(.title)
                     .padding()
                     .background(Color.blue)
-                    .foregroundColor(.white)
+                    .foregroundStyle(.white)
                     .clipShape(Circle())
             }
             
@@ -36,8 +36,6 @@ struct DetailScreen: View {
     }
 }
 
-struct DetailScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailScreen()
-    }
+#Preview {
+    DetailScreen()
 }

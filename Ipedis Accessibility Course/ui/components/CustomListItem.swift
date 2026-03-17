@@ -12,10 +12,10 @@ struct CustomListItem: View {
                             .font(.headline)
                         Text("Alerte")
                             .font(.body)
-                            .foregroundColor(.white)
+                            .foregroundStyle(.white)
                             .padding(4)
                             .background(Color.red)
-                            .cornerRadius(20)
+                            .clipShape(.capsule)
                     }
                     Text("Longue description pour \(name) sur plusieurs lignes pour un petit écran")
                         .font(.body)
@@ -24,7 +24,7 @@ struct CustomListItem: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 
                 Image(systemName: "chevron.right")
-                    .foregroundColor(.gray)
+                    .foregroundStyle(.gray)
                     .accessibilityHidden(true)
             }
             .padding(16)
@@ -32,8 +32,6 @@ struct CustomListItem: View {
     }
 }
 
-struct CustomListItem_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomListItem(name: "Option 1")
-    }
+#Preview {
+    CustomListItem(name: "Option 1")
 }

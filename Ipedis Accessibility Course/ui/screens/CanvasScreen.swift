@@ -14,7 +14,7 @@ private struct LinesOfCodeGraph: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
             Text("Lignes de Code")
-                .foregroundColor(Color.white)
+                .foregroundStyle(Color.white)
                 .font(.title)
                 .accessibilityAddTraits(.isHeader)
 
@@ -40,7 +40,7 @@ private struct LinesOfCodeGraph: View {
 
                     context.draw(
                         Text("\(lines[index]) lignes")
-                            .foregroundColor(Color.white)
+                            .foregroundStyle(Color.white)
                             .font(.caption2),
                         at: CGPoint(
                             x: xInset + width / 2,
@@ -48,7 +48,7 @@ private struct LinesOfCodeGraph: View {
 
                     context.draw(
                         Text("semaine \(index + 1)")
-                            .foregroundColor(Color.white)
+                            .foregroundStyle(Color.white)
                             .font(.caption2),
                         at: CGPoint(
                             x: xInset + width / 2,
@@ -78,14 +78,12 @@ private struct LinesOfCodeGraph: View {
         .padding()
         .background {
             RoundedRectangle(cornerRadius: 8)
-                .foregroundColor(Color(white: 0.2))
+                .foregroundStyle(Color(white: 0.2))
         }
         .frame(height: 300)
     }
 }
 
-struct CanvasScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        CanvasScreen()
-    }
+#Preview {
+    CanvasScreen()
 }

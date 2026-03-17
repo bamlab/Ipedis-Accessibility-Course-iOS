@@ -81,8 +81,6 @@ struct BankAccountNumber {
     }
 }
 
-struct FormattedTextsScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        FormattedTextsScreen()
-    }
+#Preview {
+    FormattedTextsScreen()
 }

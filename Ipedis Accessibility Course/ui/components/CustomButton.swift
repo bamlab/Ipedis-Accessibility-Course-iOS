@@ -11,8 +11,8 @@ struct CustomButton: View {
         }
         .padding()
         .background(Color.blue)
-        .foregroundColor(.white)
-        .cornerRadius(8)
+        .foregroundStyle(.white)
+        .clipShape(.rect(cornerRadius: 8))
         .customClick(action: action)
     }
 }

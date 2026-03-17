@@ -15,16 +15,14 @@ struct ListScreen: View {
                        showAlert = true
                    }
                }
-               .listStyle(PlainListStyle())
+               .listStyle(.plain)
            }.navigationTitle("List")
-           .alert(isPresented: $showAlert) {
-               Alert(title: Text("Item \(selectedItem ?? 0) clicked"))
+           .alert("Item \(selectedItem ?? 0) clicked", isPresented: $showAlert) {
+               Button("OK") {}
            }
        }
    }
 
-struct ListScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        ListScreen()
-    }
+#Preview {
+    ListScreen()
 }

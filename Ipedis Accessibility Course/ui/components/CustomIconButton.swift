@@ -10,7 +10,7 @@ struct CustomIconButton: View {
                 .font(.title)
                 .padding()
                 .background(Color.blue)
-                .foregroundColor(.white)
+                .foregroundStyle(.white)
                 .clipShape(Circle())
                 .customClick(action: action)
     }

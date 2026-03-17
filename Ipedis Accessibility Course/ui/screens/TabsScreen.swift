@@ -79,7 +79,7 @@ struct CustomTab: View {
                 .padding(8)
                 .frame(maxWidth: .infinity)
                 .background(selected ? Color.primary.opacity(0.1) : Color.clear)
-                .cornerRadius(8)
+                .clipShape(.rect(cornerRadius: 8))
         }
         .onTapGesture {
             onClick()
@@ -92,8 +92,6 @@ struct Tabs {
     static let title = "Tabs Example"
 }
 
-struct TabsScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        TabsScreen()
-    }
+#Preview {
+    TabsScreen()
 }

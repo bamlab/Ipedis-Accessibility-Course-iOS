@@ -1,4 +1,5 @@
 import SwiftUI
+@MainActor
 final class Router: ObservableObject {
     
     public enum Destination: Codable, Hashable { 

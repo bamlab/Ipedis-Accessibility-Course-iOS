@@ -18,7 +18,7 @@ struct HomeScreen: View {
                     router.navigate(to: .detail)
                 }
                 
-                if(isArticleVisible) {
+                if isArticleVisible {
                     CustomArticle(title: "Article 1", content: "Ceci est le contenu de l'article 1")
                 }
                 
@@ -54,8 +54,6 @@ struct HomeScreen: View {
     }
 }
 
-struct HomeScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeScreen()
-    }
+#Preview {
+    HomeScreen()
 }

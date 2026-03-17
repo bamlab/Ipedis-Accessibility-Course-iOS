@@ -47,7 +47,7 @@ struct CustomArticle: View {
                 }
                 Text(content)
                     .font(.body)
-                    .foregroundColor(.secondary)
+                    .foregroundStyle(.secondary)
                 
             }
         }
@@ -60,12 +60,14 @@ struct CustomArticle: View {
     private func handleButtonClick() {
         if selected.isFavorite() {
             selected = .deleteFavorite
-            DispatchQueue.main.asyncAfter(deadline: .now() + 8) {
+            Task {
+                try? await Task.sleep(for: .seconds(8))
                 selected = .notFavorite
             }
         } else if selected == .notFavorite {
             selected = .addingFavorite
-            DispatchQueue.main.asyncAfter(deadline: .now() + 8) {
+            Task {
+                try? await Task.sleep(for: .seconds(8))
                 selected = .favorite
             }
         }

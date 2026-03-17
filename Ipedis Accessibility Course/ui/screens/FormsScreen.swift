@@ -72,29 +72,27 @@ struct CustomTextField: View {
         VStack(alignment: .leading, spacing: 4) {
             Text(label)
                 .font(.subheadline)
-                .foregroundColor(.primary)
+                .foregroundStyle(.primary)
 
             TextField("", text: $value)
                 .keyboardType(keyboardType)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .textFieldStyle(.roundedBorder)
                 .padding(.bottom, 4)
 
             if isError {
                 Text(supportingText)
                     .font(.footnote)
-                    .foregroundColor(.red)
+                    .foregroundStyle(.red)
             } else {
                 Text(supportingText)
                     .font(.footnote)
-                    .foregroundColor(.gray)
+                    .foregroundStyle(.gray)
             }
         }
         
     }
 }
 
-struct FormsScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        FormsScreen()
-    }
+#Preview {
+    FormsScreen()
 }

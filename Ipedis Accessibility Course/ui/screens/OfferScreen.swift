@@ -12,7 +12,7 @@ struct OfferScreen: View {
                 .resizable()
                 .scaledToFit()
                 .frame(maxWidth: .infinity)
-                .accessibility(label: Text(imageContentDescription))
+                .accessibilityLabel(imageContentDescription)
 
             List(0..<4) { index in
                 Text("Offre d'emploi n°\(index)")
@@ -22,8 +22,6 @@ struct OfferScreen: View {
     }
 }
 
-struct OfferScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        OfferScreen()
-    }
+#Preview {
+    OfferScreen()
 }
